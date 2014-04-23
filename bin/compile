@@ -151,10 +151,6 @@ else
   echo "-----> No Bower.json found"
 fi
 
-echo "Node Modules"
-ls -lart $build_dir/node_modules/*
-
-
 # Check and run Grunt
 (
   if [ -f $build_dir/grunt.js ] || [ -f $build_dir/Gruntfile.js ] || [ -f $build_dir/Gruntfile.coffee ]; then
