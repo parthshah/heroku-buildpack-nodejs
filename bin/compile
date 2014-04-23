@@ -142,19 +142,18 @@ echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\
 
 # Bower stuff
 # Update the PATH
-if [ -f $BUILD_DIR/bower.json ]; then
+if [ -f $build_dir/bower.json ]; then
   # make sure that bower is installed locally
   run_npm "install bower"
   echo "-----> Found bower.json, running bower install"
   $BUILD_DIR/node_modules/.bin/bower install
 else
-  echo "-----> No Bower.json found PS"
+  echo "-----> No Bower.json found"
 fi
 
 echo "Node Modules"
 ls -lart $build_dir/node_modules/*
 
-find . -name bower_components *
 
 # Check and run Grunt
 (
